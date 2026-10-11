@@ -5,6 +5,12 @@
 >
 > 项目原名：麦麦餐厅；参赛用名：**麦麦餐厅-慧眼识人**。
 
+## 🎮 在线试玩（点开即玩）
+
+**<https://maimai-restaurant.app.workbuddy.host/>**
+
+无需下载、无需安装，浏览器打开就能玩。也可以下载仓库里的 `maimai-restaurant.html` 双击离线运行。
+
 ## 一句话介绍
 
 「麦麦餐厅」是一款单人上帝视角俯视餐厅的轻量出餐游戏：观察顾客订单 → 推荐更划算组合 → 按配方点材料 → 整盘交餐 → 获得餐费、小费与评价 → 升级餐厅。游戏在浏览器中即可运行，离线也能玩；麦当劳真实餐品营养数据通过本地同步脚本接入，数据脱敏后嵌入游戏侧栏。
@@ -45,6 +51,7 @@ npm run build
 生成：
 - `dist/maimai-restaurant.html`
 - `maimai-restaurant.html`（项目根目录，可直接双击打开）
+- `docs/index.html`（在线试玩页 / GitHub Pages 发布源）
 
 ### 运行测试
 
@@ -96,12 +103,47 @@ npm test
 
 项目为纯静态单文件 HTML，可部署到任意静态托管：
 
-- GitHub Pages：将 `maimai-restaurant.html` 推送到仓库并启用 Pages
+- **在线试玩页**：`docs/index.html`（即 `maimai-restaurant.html` 的副本，已发布到 <https://maimai-restaurant.app.workbuddy.host/>）
+- GitHub Pages：仓库已内置 `docs/`，在 Settings → Pages 里把 Source 选为 `main` 分支的 `/docs` 即可
 - Netlify / Vercel / Cloudflare Pages：直接上传 `dist/maimai-restaurant.html`
 
 ## 截图
 
-见项目 `screenshots/` 目录（开发过程中生成）。
+### 开始营业
+
+开始界面写明完整规则，并可填入固定种子复现同一局顾客。
+
+![开始界面](screenshots/01-start.png)
+
+### 营业中：读词条、做优惠决策、盯倒计时
+
+三位顾客各自带着词条与订单卡出现在面前，头顶显示剩余耐心；右侧是当单标准配方与麦当劳 MCP 真实营养数据。
+
+![营业中](screenshots/02-gameplay.png)
+
+### 推荐 +小费：整盘备齐
+
+点「推荐 +小费」接单后，按配方从材料台取料，汉堡区与小食饮料区显示已备餐品。
+
+![推荐优惠并备齐整盘](screenshots/03-recommended-prepared.png)
+
+### 出餐结算：小费到账
+
+正确及时出餐，优惠金额按接单时锁定的小费倍率结算，顾客给出好评、评价等级上升。
+
+![小费到账](screenshots/04-tip-earned.png)
+
+### 直接接单：漏推优惠被投诉
+
+选「直接 无小费」后若被顾客发现漏推优惠，按接单时锁定的补偿倍率赔付，差评并降低评价等级。
+
+![优惠投诉](screenshots/05-coupon-complaint.png)
+
+### 移动端
+
+窄屏下界面自适应，弹窗与操作按钮完整可用。
+
+![移动端](screenshots/06-mobile.png)
 
 ## 许可证
 

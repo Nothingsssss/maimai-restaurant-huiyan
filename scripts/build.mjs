@@ -11,6 +11,9 @@ function build() {
   const outDir = path.join(root, 'dist');
   const outPath = path.join(outDir, 'maimai-restaurant.html');
   const rootOutPath = path.join(root, 'maimai-restaurant.html');
+  // docs/ 用于静态托管：既是 GitHub Pages 的发布源，也是在线试玩页的部署目录
+  const docsDir = path.join(root, 'docs');
+  const docsOutPath = path.join(docsDir, 'index.html');
 
   let html = fs.readFileSync(htmlPath, 'utf-8');
 
@@ -27,10 +30,13 @@ function build() {
   html = html.replace('// __INLINE_MCP_CACHE__', cacheScript);
 
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+  if (!fs.existsSync(docsDir)) fs.mkdirSync(docsDir, { recursive: true });
   fs.writeFileSync(outPath, html, 'utf-8');
   fs.writeFileSync(rootOutPath, html, 'utf-8');
+  fs.writeFileSync(docsOutPath, html, 'utf-8');
   console.log(`Built: ${outPath}`);
   console.log(`Built: ${rootOutPath}`);
+  console.log(`Built: ${docsOutPath}`);
 }
 
 build();

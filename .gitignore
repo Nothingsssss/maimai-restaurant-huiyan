@@ -29,3 +29,6 @@ tests/__snapshots__/
 
 # WorkBuddy local workspace metadata
 .workbuddy/
+
+# WorkBuddy app marker
+.wbapp_*.genie
