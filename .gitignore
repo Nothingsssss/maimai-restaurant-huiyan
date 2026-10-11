@@ -1,0 +1,28 @@
+# Credentials / environment
+.env
+.env.local
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build output (keep dist/ for GitHub Pages, but ignore temp)
+tmp/
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test snapshots (no token leakage)
+tests/__snapshots__/

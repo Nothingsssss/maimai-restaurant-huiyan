@@ -1,0 +1,27 @@
+{
+  "name": "maimai-restaurant-huiyan",
+  "version": "1.0.0",
+  "description": "麦麦餐厅-慧眼识人 - 麦当劳 2026 年 1024 程序员创意开发大赛参赛项目：MCP 餐品数据驱动的配餐与优惠服务练习网页游戏",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.mjs --watch",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js",
+    "mcp:sync": "node scripts/sync-mcd-data.mjs"
+  },
+  "keywords": [
+    "mcdonalds",
+    "mcp",
+    "game",
+    "restaurant",
+    "WorkBuddy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1"
+  },
+  "dependencies": {
+    "agent-browser": "^0.27.0"
+  }
+}

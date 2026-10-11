@@ -1,0 +1,15 @@
+{
+  "serverUrl": "https://mcp.mcd.cn",
+  "transport": "streamable-http",
+  "auth": {
+    "type": "bearer",
+    "envVar": "MCD_MCP_TOKEN"
+  },
+  "tools": {
+    "nutrition": "list-nutrition-foods"
+  },
+  "cache": {
+    "path": "data/mcd-menu.json",
+    "fallbackOnError": true
+  }
+}
