@@ -26,3 +26,6 @@ npm-debug.log*
 
 # Test snapshots (no token leakage)
 tests/__snapshots__/
+
+# WorkBuddy local workspace metadata
+.workbuddy/
